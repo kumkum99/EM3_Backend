@@ -1,0 +1,83 @@
+<%- include('./partials/header.ejs', {title: 'Home'}) -%>
+
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta Tags -->
+		
+		<!-- Title -->
+        <title>Cart</title>
+		
+		<style>
+			/* Custom CSS for medical section */
+				#medicine-list .card {
+					margin-bottom: 20px; /* Add space between cards */
+					margin-right: 20px; /* Add space between cards horizontally */
+					padding: 15px; /* Add padding inside card */
+				}
+				#medicine-list .card:last-child {
+					margin-right: 0; /* Remove right margin for the last card */
+				}
+				#medicine-list .card-body {
+					padding: 10px; /* Add padding inside card body */
+				}
+				/* Custom CSS for medical section */
+				#medicine-search-form {
+					margin-bottom: 20px; /* Add margin to bottom of search form */
+				}
+				.container {
+					padding-top: 20px; /* Add padding to the top of the container */
+				}
+				.card {
+					margin-bottom: 20px; /* Add margin to bottom of each card */
+				}
+				.container {
+					padding-top: 20px; /* Add padding to the top of the container */
+				}
+					/* CSS for smaller buttons */
+					.small-btn {
+						font-size: 0.8rem; /* Adjust the font size as needed */
+						padding: 0.2rem 0.4rem; /* Adjust the padding as needed */
+					}
+				</style>
+	</head>
+    <body>
+	
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+		
+    <!-- Cart section -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">Cart</h5>
+                  <ul id="cart-items"></ul>
+                  <p>Total Price: <span id="total-price">0.00</span></p>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- End Cart section -->
+
+<!-- Cart Section Javascript start -->
+
+
+
+<!-- Cart Section Javscript End -->
+
+</body>
+</html>
+<%- include('./partials/footer.ejs') -%>

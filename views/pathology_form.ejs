@@ -1,0 +1,126 @@
+<%- include('./partials/header.ejs', {title: 'Home'}) -%>
+
+<html class="no-js" lang="zxx">
+    <head>
+		<!-- Title -->
+        <title>Pathology form</title>
+		
+    </head>
+    <body>
+			<!-- Breadcrumbs -->
+			<div class="breadcrumbs overlay">
+				<div class="container">
+					<div class="bread-inner">
+						<div class="row">
+							<div class="col-12">
+								<h2>Book Your Test</h2>
+								<ul class="bread-list">
+									<li><a href="/pathology">Pathology</a></li>
+									<li><i class="icofont-simple-right"></i></li>
+									<li class="active">Testing Appointment</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Breadcrumbs -->
+        <!-- Start Appointment -->
+		<section class="appointment" style="margin-bottom: 25px ;">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Are Always Ready to Help You. Book An Appointment</h2>
+							<img src="img/section-img.png" alt="#">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-12">
+						<form class="form" action="pathology" method="POST">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="name" type="text" placeholder="Name">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="email" type="email" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="phone" type="text" placeholder="Phone">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<select name="testType">
+											<option value="">Select Test Type</option>
+											<option value="Ultrasound">Ultrasound</option>
+											<option value="HIV">HIV</option>
+											<option value="MRI">MRI</option>
+											<option value="Corona">Corona</option>
+											<option value="Urine Test">Urine Test</option>
+											<option value="Blood Test">Blood Test</option>
+											<option value="Fever Test">Fever Test</option>
+											<option value="Allergy Test">Allergy Test</option>
+											<option value="Pregnancy Checkup">Pregnancy Checkup</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<select name="time">
+											<option value="">Select Time</option>
+											<option value="8 AM to 12 PM">8 AM to 12 PM</option>
+											<option value="2 PM to 5 PM">2 PM to 5 PM</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="text" placeholder="Date" id="datepicker">
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-12">
+									<div class="form-group">
+										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-md-4 col-12">
+									<div class="form-group">
+										<div class="button">
+											<button type="submit" class="btn">Book appointment</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						
+					</div>
+					<div class="col-lg-6 col-md-12 ">
+						<div class="appointment-image">
+							<img src="img/test.jpg" alt="#">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Appointment -->
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>
+    <script>
+        const datepicker = new Datepicker(document.getElementById('datepicker'), {
+            format: 'yyyy-mm-dd'
+        });
+    </script>
+				<!--/ End Call to action -->
+
+    </body>
+</html>
+<%- include('./partials/footer.ejs') -%>
